@@ -23,12 +23,12 @@ public void BrowserLaunch() throws InterruptedException, IOException {
 	ChromeOptions options = new ChromeOptions();
 	options.addArguments("--disable-notifications");
 	options.addArguments("--remote-allow-origins=*");
-	File f = new File("..//YTFramework/object.properties");
+	File f = new File("..//YouTFramework/object.properties");
 	FileReader fr= new FileReader(f);
 	pr=new Properties();
 	pr.load(fr);
 
-System.setProperty("webdriver.chrome.driver", "..///YTFramework/chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", "..//YouTFramework/chromedriver.exe");
 driver =new ChromeDriver(options);
 driver.get("https://www.youtube.com/");
 driver.manage().window().maximize();
